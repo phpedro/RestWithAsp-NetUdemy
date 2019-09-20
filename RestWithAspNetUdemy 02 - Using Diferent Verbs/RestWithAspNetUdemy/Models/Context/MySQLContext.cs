@@ -1,8 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace RestWithAspNetUdemy.Models.Context
 {
@@ -10,6 +6,6 @@ namespace RestWithAspNetUdemy.Models.Context
     {
         public MySQLContext() { }
         public MySQLContext(DbContextOptions<MySQLContext> options) : base(options) { }
-        public DbSet<Person> Persons { get; set; }  
+        public DbSet<Person> Persons { get; set; }
     }
 }

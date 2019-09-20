@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using RestWithAspNetUdemy.Models;
+﻿using RestWithAspNetUdemy.Models;
 using RestWithAspNetUdemy.Models.Context;
+using System;
+using System.Collections.Generic;
 
 namespace RestWithAspNetUdemy.Services.Implementation
 {
@@ -36,7 +34,8 @@ namespace RestWithAspNetUdemy.Services.Implementation
         }
         private Person MockPerson(int i)
         {
-            Person p = new Person() {
+            Person p = new Person()
+            {
                 Id = i,
                 Address = i + RandomStr(),
                 FirstName = i + RandomStr(),
@@ -61,9 +60,10 @@ namespace RestWithAspNetUdemy.Services.Implementation
         }
         public Person FindById(long id)
         {
-            return new Person(){
-                Id=id,
-                FirstName = "Pedro",                
+            return new Person()
+            {
+                Id = id,
+                FirstName = "Pedro",
                 LastName = "Henrique",
                 Address = "Rua Ademar Vieira Tavares, 252",
                 Gender = "Male",
