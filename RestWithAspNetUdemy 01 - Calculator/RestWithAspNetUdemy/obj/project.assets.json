@@ -12101,11 +12101,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ProjetoAulas\\RestWithAsp-NetUdemy\\RestWithAspNetUdemy\\RestWithAspNetUdemy\\RestWithAspNetUdemy.csproj",
+      "projectUniqueName": "D:\\ProjetoAulas\\RestWithAsp-NetUdemy\\RestWithAspNetUdemy 01 - Calculator\\RestWithAspNetUdemy\\RestWithAspNetUdemy.csproj",
       "projectName": "RestWithAspNetUdemy",
-      "projectPath": "D:\\ProjetoAulas\\RestWithAsp-NetUdemy\\RestWithAspNetUdemy\\RestWithAspNetUdemy\\RestWithAspNetUdemy.csproj",
+      "projectPath": "D:\\ProjetoAulas\\RestWithAsp-NetUdemy\\RestWithAspNetUdemy 01 - Calculator\\RestWithAspNetUdemy\\RestWithAspNetUdemy.csproj",
       "packagesPath": "C:\\Users\\PedroHR\\.nuget\\packages\\",
-      "outputPath": "D:\\ProjetoAulas\\RestWithAsp-NetUdemy\\RestWithAspNetUdemy\\RestWithAspNetUdemy\\obj\\",
+      "outputPath": "D:\\ProjetoAulas\\RestWithAsp-NetUdemy\\RestWithAspNetUdemy 01 - Calculator\\RestWithAspNetUdemy\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

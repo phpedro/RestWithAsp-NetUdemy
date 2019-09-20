@@ -12,3 +12,17 @@ D:\ProjetoAulas\RestWithAsp-NetUdemy\RestWithAspNetUdemy\RestWithAspNetUdemy\obj
 D:\ProjetoAulas\RestWithAsp-NetUdemy\RestWithAspNetUdemy\RestWithAspNetUdemy\obj\Debug\netcoreapp2.2\RestWithAspNetUdemy.RazorTargetAssemblyInfo.cache
 D:\ProjetoAulas\RestWithAsp-NetUdemy\RestWithAspNetUdemy\RestWithAspNetUdemy\obj\Debug\netcoreapp2.2\RestWithAspNetUdemy.dll
 D:\ProjetoAulas\RestWithAsp-NetUdemy\RestWithAspNetUdemy\RestWithAspNetUdemy\obj\Debug\netcoreapp2.2\RestWithAspNetUdemy.pdb
+D:\ProjetoAulas\RestWithAsp-NetUdemy\RestWithAspNetUdemy 01 - Calculator\RestWithAspNetUdemy\bin\Debug\netcoreapp2.2\RestWithAspNetUdemy.deps.json
+D:\ProjetoAulas\RestWithAsp-NetUdemy\RestWithAspNetUdemy 01 - Calculator\RestWithAspNetUdemy\bin\Debug\netcoreapp2.2\RestWithAspNetUdemy.runtimeconfig.json
+D:\ProjetoAulas\RestWithAsp-NetUdemy\RestWithAspNetUdemy 01 - Calculator\RestWithAspNetUdemy\bin\Debug\netcoreapp2.2\RestWithAspNetUdemy.runtimeconfig.dev.json
+D:\ProjetoAulas\RestWithAsp-NetUdemy\RestWithAspNetUdemy 01 - Calculator\RestWithAspNetUdemy\bin\Debug\netcoreapp2.2\RestWithAspNetUdemy.dll
+D:\ProjetoAulas\RestWithAsp-NetUdemy\RestWithAspNetUdemy 01 - Calculator\RestWithAspNetUdemy\bin\Debug\netcoreapp2.2\RestWithAspNetUdemy.pdb
+D:\ProjetoAulas\RestWithAsp-NetUdemy\RestWithAspNetUdemy 01 - Calculator\RestWithAspNetUdemy\obj\Debug\netcoreapp2.2\RestWithAspNetUdemy.csprojAssemblyReference.cache
+D:\ProjetoAulas\RestWithAsp-NetUdemy\RestWithAspNetUdemy 01 - Calculator\RestWithAspNetUdemy\obj\Debug\netcoreapp2.2\RestWithAspNetUdemy.csproj.CoreCompileInputs.cache
+D:\ProjetoAulas\RestWithAsp-NetUdemy\RestWithAspNetUdemy 01 - Calculator\RestWithAspNetUdemy\obj\Debug\netcoreapp2.2\RestWithAspNetUdemy.RazorAssemblyInfo.cache
+D:\ProjetoAulas\RestWithAsp-NetUdemy\RestWithAspNetUdemy 01 - Calculator\RestWithAspNetUdemy\obj\Debug\netcoreapp2.2\RestWithAspNetUdemy.RazorAssemblyInfo.cs
+D:\ProjetoAulas\RestWithAsp-NetUdemy\RestWithAspNetUdemy 01 - Calculator\RestWithAspNetUdemy\obj\Debug\netcoreapp2.2\RestWithAspNetUdemy.AssemblyInfoInputs.cache
+D:\ProjetoAulas\RestWithAsp-NetUdemy\RestWithAspNetUdemy 01 - Calculator\RestWithAspNetUdemy\obj\Debug\netcoreapp2.2\RestWithAspNetUdemy.AssemblyInfo.cs
+D:\ProjetoAulas\RestWithAsp-NetUdemy\RestWithAspNetUdemy 01 - Calculator\RestWithAspNetUdemy\obj\Debug\netcoreapp2.2\RestWithAspNetUdemy.RazorTargetAssemblyInfo.cache
+D:\ProjetoAulas\RestWithAsp-NetUdemy\RestWithAspNetUdemy 01 - Calculator\RestWithAspNetUdemy\obj\Debug\netcoreapp2.2\RestWithAspNetUdemy.dll
+D:\ProjetoAulas\RestWithAsp-NetUdemy\RestWithAspNetUdemy 01 - Calculator\RestWithAspNetUdemy\obj\Debug\netcoreapp2.2\RestWithAspNetUdemy.pdb
