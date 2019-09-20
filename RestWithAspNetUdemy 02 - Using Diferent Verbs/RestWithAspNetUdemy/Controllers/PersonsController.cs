@@ -3,43 +3,59 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using RestWithAspNetUdemy.Models;
+using RestWithAspNetUdemy.Services;
 
 namespace RestWithAspNetUdemy.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class PersonsController : ControllerBase
     {
-        // GET api/values
+        private IPersonService _personService;
+        public PersonsController(IPersonService person)
+        {
+            _personService = person;
+        }        
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            return Ok(_personService.FindAll());
         }
-
-        // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            var person = _personService.FindById(id);
+            if (person != null)
+                return Ok(person);
+            else
+                return NotFound();
         }
-
-        // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody]Person person)
         {
-        }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+            if (person != null)
+                return new ObjectResult(_personService.Create(person));
+            else
+                return NotFound();
+        }
+        [HttpPut]
+        public IActionResult Put([FromBody]Person person)
         {
+            if (person != null)
+                return new ObjectResult(_personService.Update(person));
+            else
+                return NotFound();
         }
-
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            if (_personService.Delete(id))
+                return NoContent();
+            else
+                return BadRequest();
         }
     }
 }
