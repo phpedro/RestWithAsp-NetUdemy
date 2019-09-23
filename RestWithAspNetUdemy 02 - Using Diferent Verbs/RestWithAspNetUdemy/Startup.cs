@@ -25,7 +25,8 @@ namespace RestWithAspNetUdemy
             services.AddDbContext<MySQLContext>(options => options.UseMySql(connection));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new Info { Title = "Values Api", Version = "v1" }); });
-            services.AddScoped<IPersonService, PersonServiceImplementation>();
+            services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
+            services.AddApiVersioning();
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

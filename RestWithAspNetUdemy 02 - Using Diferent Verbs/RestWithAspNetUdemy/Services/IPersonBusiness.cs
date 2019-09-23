@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace RestWithAspNetUdemy.Services
 {
-    public interface IPersonService
+    public interface IPersonBusiness
     {
         Person Create(Person person);
         Person FindById(long id);

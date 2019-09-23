@@ -4,15 +4,16 @@ using RestWithAspNetUdemy.Services;
 
 namespace RestWithAspNetUdemy.Controllers
 {
-    [Route("api/[controller]")]
+    [ApiVersion("1")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class PersonsController : ControllerBase
     {
-        private IPersonService _personService;
-        public PersonsController(IPersonService person)
+        private IPersonBusiness _personService;
+        public PersonsController(IPersonBusiness person)
         {
             _personService = person;
-        }
+        }        
         [HttpGet]
         public IActionResult Get()
         {
