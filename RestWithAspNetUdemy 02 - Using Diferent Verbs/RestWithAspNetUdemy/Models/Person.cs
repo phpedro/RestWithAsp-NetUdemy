@@ -1,5 +1,4 @@
 ﻿using RestWithAspNetUdemy.Models.Base;
-using System.ComponentModel.DataAnnotations;
 
 namespace RestWithAspNetUdemy.Models
 {

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using RestWithAspNetUdemy.Business;
 using RestWithAspNetUdemy.Data.VO;
 using RestWithAspNetUdemy.Models;
@@ -19,7 +20,8 @@ namespace RestWithAspNetUdemy.Controllers
         [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get()
         {
-            return Ok(_personBusiness.FindAll());
+            var persons = _personBusiness.FindAll();           
+            return Ok(persons);
         }
         [HttpGet("{id}")]
         [TypeFilter(typeof(HyperMediaFilter))]

@@ -1,9 +1,7 @@
 ﻿using RestWithAspNetUdemy.Data.Converters;
 using RestWithAspNetUdemy.Data.VO;
 using RestWithAspNetUdemy.Models;
-using RestWithAspNetUdemy.Repository;
 using RestWithAspNetUdemy.Repository.Generic;
-using RestWithAspNetUdemy.Repository.Implementation;
 using System.Collections.Generic;
 
 namespace RestWithAspNetUdemy.Business.Implementation

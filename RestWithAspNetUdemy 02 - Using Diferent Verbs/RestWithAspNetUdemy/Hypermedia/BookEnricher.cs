@@ -3,14 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using RestWithAspNetUdemy.Data.VO;
 using System;
+using RestWithAspNetUdemy.Models;
 
 namespace RestWithAspNetUdemy.Hypermedia
 {
-    public class PersonEnricher : ObjectContentResponseEnricher<PersonVO>
+    public class BookEnricher : ObjectContentResponseEnricher<BookVO>
     {
-        protected override Task EnrichModel(PersonVO content, IUrlHelper urlHelper)
+        protected override Task EnrichModel(BookVO content, IUrlHelper urlHelper)
         {
-            var path = "api/v1/Persons/";
+            var path = "api/v1/Books/";
             var url = new { controller = path, id = content.id };
             var req = urlHelper.ActionContext.HttpContext.Request;            
             content.Links.Add(new HyperMediaLink()

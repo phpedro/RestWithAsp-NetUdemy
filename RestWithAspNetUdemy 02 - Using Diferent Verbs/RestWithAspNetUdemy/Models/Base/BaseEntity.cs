@@ -1,6 +1,4 @@
-﻿using System.Runtime.Serialization;
-
-namespace RestWithAspNetUdemy.Models.Base
+﻿namespace RestWithAspNetUdemy.Models.Base
 {
     //Contrato atributos da entidade e a estrutura da tabela
 

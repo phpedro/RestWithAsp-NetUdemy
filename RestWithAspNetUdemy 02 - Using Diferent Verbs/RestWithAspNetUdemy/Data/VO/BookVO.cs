@@ -1,23 +1,20 @@
 ﻿using RestWithAspNetUdemy.Models.Base;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
+using Tapioca.HATEOAS;
 
 namespace RestWithAspNetUdemy.Models
 {
-    [DataContract]
-    public class BookVO
+    public class BookVO : ISupportsHyperMedia
     {
-        [DataMember(Order = 1)]
         public long? id { get; set; }
-        [DataMember(Order = 2)]
         public string Title { get; set; }
-        [DataMember(Order = 3)]
         public string Author { get; set; }
-        [DataMember(Order = 4)]
         public decimal Price { get; set; }
-        [DataMember(Order = 5)]
         public DateTime LaunchDate { get; set; }
+        public List<HyperMediaLink> Links { get; set; } = new List<HyperMediaLink>();
     }
 }
