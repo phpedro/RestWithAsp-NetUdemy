@@ -4,12 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace RestWithAspNetUdemy.Services.Implementation
+namespace RestWithAspNetUdemy.Repository.Implementation
 {
-    public class PersonBusinessImplementation : IPersonBusiness
+    public class PersonRepositoryImplementation : IPersonRepository
     {
         private MySQLContext _context;
-        public PersonBusinessImplementation(MySQLContext context)
+        public PersonRepositoryImplementation(MySQLContext context)
         {
             _context = context;
         }
@@ -21,13 +21,13 @@ namespace RestWithAspNetUdemy.Services.Implementation
         }
         public bool Delete(long id)
         {
-            if (!Exist(id))
+            if (!Exists(id))
             {
                 return false;
             }
             else
             {
-                var result = _context.Persons.SingleOrDefault(p => p.Id == id);
+                var result = _context.Persons.SingleOrDefault(p => p.id == id);
                 try
                 {
                     if (result != null)
@@ -37,7 +37,7 @@ namespace RestWithAspNetUdemy.Services.Implementation
                         return true;
                     }
                     return false;
-                    
+
                 }
                 catch (Exception ex)
                 {
@@ -54,7 +54,7 @@ namespace RestWithAspNetUdemy.Services.Implementation
         {
             Person p = new Person()
             {
-                Id = i,
+                id = i,
                 Address = i + RandomStr(),
                 FirstName = i + RandomStr(),
                 LastName = i + RandomStr(),
@@ -78,33 +78,34 @@ namespace RestWithAspNetUdemy.Services.Implementation
         }
         public Person FindById(long id)
         {
-            var retorno = _context.Persons.SingleOrDefault(x => x.Id == id);
+            var retorno = _context.Persons.SingleOrDefault(x => x.id == id);
             return retorno;
         }
         public Person Update(Person person)
         {
-            if (!Exist(person.Id))
+            if (!Exists(person.id))
             {
                 return new Person();
             }
             else
             {
-                var result = _context.Persons.SingleOrDefault(p => p.Id == person.Id);
+                var result = _context.Persons.SingleOrDefault(p => p.id == person.id);
                 try
                 {
                     _context.Entry(result).CurrentValues.SetValues(person);
                     _context.SaveChanges();
                     return person;
-                } catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
                     throw ex;
                 }
             }
 
         }
-        public bool Exist(long? id)
+        public bool Exists(long? id)
         {
-            return _context.Persons.Any(x => x.Id == id);
+            return _context.Persons.Any(x => x.id == id);
         }
     }
 }

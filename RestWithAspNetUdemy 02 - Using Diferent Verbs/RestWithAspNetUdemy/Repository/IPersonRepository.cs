@@ -1,13 +1,14 @@
 ﻿using RestWithAspNetUdemy.Models;
 using System.Collections.Generic;
-namespace RestWithAspNetUdemy.Services
+namespace RestWithAspNetUdemy.Repository
 {
-    public interface IPersonBusiness
+    public interface IPersonRepository
     {
         Person Create(Person person);
         Person FindById(long id);
         List<Person> FindAll();
         Person Update(Person person);
         bool Delete(long id);
+        bool Exists(long? id);
     }
 }

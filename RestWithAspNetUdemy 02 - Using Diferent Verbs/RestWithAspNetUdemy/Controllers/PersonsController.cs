@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RestWithAspNetUdemy.Business;
+using RestWithAspNetUdemy.Data.VO;
 using RestWithAspNetUdemy.Models;
-using RestWithAspNetUdemy.Services;
-
+using Tapioca.HATEOAS;
 namespace RestWithAspNetUdemy.Controllers
 {
     [ApiVersion("1")]
@@ -9,47 +10,50 @@ namespace RestWithAspNetUdemy.Controllers
     [ApiController]
     public class PersonsController : ControllerBase
     {
-        private IPersonBusiness _personService;
+        private IPersonBusiness _personBusiness;
         public PersonsController(IPersonBusiness person)
         {
-            _personService = person;
-        }        
+            _personBusiness = person;
+        }
         [HttpGet]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get()
         {
-            return Ok(_personService.FindAll());
+            return Ok(_personBusiness.FindAll());
         }
         [HttpGet("{id}")]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get(int id)
         {
-            var person = _personService.FindById(id);
+            var person = _personBusiness.FindById(id);
             if (person != null)
                 return Ok(person);
             else
                 return NotFound();
         }
         [HttpPost]
-        public IActionResult Post([FromBody]Person person)
+        [TypeFilter(typeof(HyperMediaFilter))]
+        public IActionResult Post([FromBody]PersonVO person)
         {
-
             if (person != null)
-                return new ObjectResult(_personService.Create(person));
+                return new ObjectResult(_personBusiness.Create(person));
             else
                 return NotFound();
         }
         [HttpPut]
-        public IActionResult Put([FromBody]Person person)
+        [TypeFilter(typeof(HyperMediaFilter))]
+        public IActionResult Put([FromBody]PersonVO person)
         {
             if (person != null)
-                return new ObjectResult(_personService.Update(person));
+                return new ObjectResult(_personBusiness.Update(person));
             else
                 return NotFound();
         }
-        // DELETE api/values/5
         [HttpDelete("{id}")]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Delete(int id)
         {
-            if (_personService.Delete(id))
+            if (_personBusiness.Delete(id))
                 return NoContent();
             else
                 return BadRequest();
